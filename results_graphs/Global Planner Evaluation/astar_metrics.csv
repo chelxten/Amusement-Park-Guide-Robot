@@ -1,0 +1,8 @@
+timestamp,id,goal,context,is_replan,ok,fail_reason,plan_time_ms,nodes_expanded,nodes_generated,open_list_max,path_len_m,path_cost_grid,w
+2025-08-31 13:03:33,cb5846,Magic Show,named,0,1,,40.507,2787,3133,348,16.084,160.841,1.5
+2025-08-31 13:03:59,cb5846,Magic Show,stall,1,1,,43.952,2781,3128,349,15.684,156.841,1.5
+2025-08-31 13:14:42,cb5846,Musical Fountain,named,0,1,,27.073,1580,2300,722,14.687,146.87,1.5
+2025-08-31 13:25:38,cb5846,Water Slide,named,0,1,,2.877,175,533,360,17.524,175.243,1.5
+2025-08-31 13:37:27,cb5846,Candy Store,named,0,1,,2.264,136,320,186,12.253,122.527,1.5
+2025-08-31 13:37:44,cb5846,Candy Store,stall,1,1,,1.959,133,302,171,11.787,117.87,1.5
+2025-08-31 13:47:05,cb5846,Souvenir Shop,named,0,1,,1.839,74,296,224,8.791,87.912,1.5
