@@ -1,0 +1,935 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/Floor.proto"
+IMPORTABLE EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/bmw/BmwX5Simple.proto"
+IMPORTABLE EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/citroen/CitroenCZeroSimple.proto"
+IMPORTABLE EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/toyota/ToyotaPriusSimple.proto"
+IMPORTABLE EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/range_rover/RangeRoverSportSVRSimple.proto"
+IMPORTABLE EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/lincoln/LincolnMKZSimple.proto"
+IMPORTABLE EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/tesla/TeslaModel3Simple.proto"
+IMPORTABLE EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/mercedes_benz/MercedesBenzSprinterSimple.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/PorcelainChevronTiles.proto"
+EXTERNPROTO "../protos/TiagoLite.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/devices/orbbec/protos/Astra.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/street_furniture/protos/SmallKiosk.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/Roundabout.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/RoadLine.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/StraightRoadSegment.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/advertising_board/protos/AdvertisingBoard.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/trees/protos/PalmTree.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/street_furniture/protos/Bench.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/street_furniture/protos/StoneBench.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/street_furniture/protos/SimpleBench.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/street_furniture/protos/Fountain.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Grass.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Roughcast.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/garden/protos/PicketFence.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/garden/protos/PicketFenceWithDoor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/humans/pedestrian/protos/Pedestrian.proto"
+
+WorldInfo {
+  window "guide_panel"
+  ERP 0.6
+  basicTimeStep 10
+  lineScale 5
+  contactProperties [
+    ContactProperties {
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+    ContactProperties {
+      material2 "CitroenCZeroWheels"
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+    ContactProperties {
+      material2 "ToyotaPriusWheels"
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+    ContactProperties {
+      material2 "LincolnMKZWheels"
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+    ContactProperties {
+      material2 "RangeRoverSportSVRWheels"
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+    ContactProperties {
+      material2 "TruckWheels"
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.38610979716345056 0.3534083404442983 0.8520691107174382 1.8653592582954586
+  position 6.004911901049364 -36.34385557480505 39.793878416548885
+  near 1
+  exposure 0.9
+  follow "TIAGo LITE"
+  followType "None"
+  lensFlare LensFlare {
+    transparency 0.1
+  }
+}
+TexturedBackground {
+  luminosity 4
+}
+StraightRoadSegment {
+  translation -25 23 0
+  width 4
+  numberOfLanes 1
+  roadBorderHeight 0
+  startingRoadBorderWidth 0.1
+  endingRoadBorderWidth 0.1
+  rightBorder FALSE
+  leftBorder FALSE
+  length 50
+  appearance PorcelainChevronTiles {
+  }
+}
+StraightRoadSegment {
+  translation -23 -25 0
+  rotation 0 0 1 1.5707996938995747
+  name "road(2)"
+  width 4
+  numberOfLanes 1
+  roadBorderHeight 0
+  startingRoadBorderWidth 0.1
+  endingRoadBorderWidth 0.1
+  rightBorder FALSE
+  leftBorder FALSE
+  length 50
+  appearance PorcelainChevronTiles {
+  }
+}
+StraightRoadSegment {
+  translation 23 -25 0
+  rotation 0 0 1 1.5707996938995747
+  name "road(3)"
+  width 4
+  numberOfLanes 1
+  roadBorderHeight 0
+  startingRoadBorderWidth 0.1
+  endingRoadBorderWidth 0.1
+  rightBorder FALSE
+  leftBorder FALSE
+  length 50
+  appearance PorcelainChevronTiles {
+  }
+}
+StraightRoadSegment {
+  translation -25 -23 0
+  name "road(1)"
+  width 4
+  numberOfLanes 1
+  roadBorderHeight 0
+  startingRoadBorderWidth 0.2
+  endingRoadBorderWidth 0.2
+  rightBorder FALSE
+  leftBorder FALSE
+  length 50
+  appearance PorcelainChevronTiles {
+  }
+}
+StraightRoadSegment {
+  translation -18.4 -23.2 0
+  rotation 0 0 1 0.902
+  name "road(4)"
+  width 4
+  numberOfLanes 1
+  roadBorderHeight 0
+  startingRoadBorderWidth 0.1
+  endingRoadBorderWidth 0.1
+  rightBorder FALSE
+  leftBorder FALSE
+  appearance PorcelainChevronTiles {
+  }
+}
+StraightRoadSegment {
+  translation -18.8 23.7 0
+  rotation 0 0 1 -0.902
+  name "road(5)"
+  width 4
+  numberOfLanes 1
+  roadBorderHeight 0
+  startingRoadBorderWidth 0.1
+  endingRoadBorderWidth 0.1
+  rightBorder FALSE
+  leftBorder FALSE
+  appearance PorcelainChevronTiles {
+  }
+}
+TexturedBackgroundLight {
+}
+Fog {
+  color 0.396078431372549 0.396078431372549 0.396078431372549
+  visibilityRange 700
+}
+Floor {
+  translation 0 0 -0.02
+  size 50 50
+  tileSize 3 3
+  appearance Grass {
+  }
+}
+SimpleBench {
+  translation -13.1312 11.6526 0
+  rotation 0 0 1 0.6544983061004254
+}
+Fountain {
+  translation -15.8048 8.61998 -3.55271e-15
+}
+SimpleBench {
+  translation -15.9473 15.8491 0
+  rotation 0 0 -1 -0.6544953061004253
+  name "simple bench(1)"
+}
+Roundabout {
+  speedLimit 7
+  bottom TRUE
+  border FALSE
+  borderWidth 0.1
+  borderHeight 0.1
+  innerRadius 1
+  outerRadius 7
+  center FALSE
+  roadNumber 7
+  startRoadsLength [
+    18
+  ]
+  startRoadsWidth 4
+  startRoadsNumberOfLanes 1
+  startRoadsLine [
+    RoadLine {
+      type "continuous"
+    }
+  ]
+  appearance PorcelainChevronTiles {
+  }
+}
+DEF Wall1 AdvertisingBoard {
+  translation -2.10397 9.6481 -3.81917e-13
+  rotation 0 0 -1 -1.8325953071795862
+  name "haunted_mine_train"
+  frontTexture [
+    "../images/haunted mine train.png"
+  ]
+  backTexture [
+    "../images/haunted mine train.png"
+  ]
+  displayHeight 7
+  frameThickness 1.3
+  frameColor 0.795605 0.864805 0.546227
+  poleThickness 0.3
+}
+AdvertisingBoard {
+  translation 9.44976 7.63651 -7.0699e-13
+  rotation 0 0 -1 1.12
+  name "souvenir_shop"
+  frontTexture [
+    "../images/souvenir shop.png"
+  ]
+  backTexture [
+    "../images/souvenir shop.png"
+  ]
+  displayWidth 9
+  displayHeight 8
+  frameThickness 1.5
+  frameColor 0.795605 0.864805 0.546227
+  poleThickness 0.3
+}
+AdvertisingBoard {
+  translation 16.4274 11.0257 -3.12639e-13
+  rotation 0 0 -1 1.12
+  name "candy_store"
+  frontTexture [
+    "../images/candy store.png"
+  ]
+  backTexture [
+    "../images/candy store.png"
+  ]
+  displayWidth 6
+  displayHeight 5
+  frameThickness 1.5
+  frameColor 0.795605 0.864805 0.546227
+  poleThickness 0.3
+}
+AdvertisingBoard {
+  translation 5.88873 12.3561 -1.10135e-13
+  rotation 0 0 -1 -2.93
+  name "toy_world"
+  frontTexture [
+    "../images/toy shop.png"
+  ]
+  backTexture [
+    "../images/toy shop.png"
+  ]
+  displayWidth 12
+  displayHeight 7
+  frameThickness 1.3
+  frameColor 0.795605 0.864805 0.546227
+  poleThickness 0.3
+}
+AdvertisingBoard {
+  translation 13.0505 19.54 -3.19744e-13
+  rotation 0 0 1 1.57079
+  name "gift_emporium"
+  frontTexture [
+    "../images/gift shop.png"
+  ]
+  backTexture [
+    "../images/gift shop.png"
+  ]
+  displayWidth 12
+  displayHeight 8
+  frameThickness 2.2
+  frameColor 0.795605 0.864805 0.546227
+  poleThickness 0.3
+}
+AdvertisingBoard {
+  translation 19.9876 16.5327 -3.12639e-13
+  rotation 0 0 -1 2.45177e-06
+  name "photo_booth"
+  frontTexture [
+    "../images/photo booth.png"
+  ]
+  backTexture [
+    "../images/photo booth.png"
+  ]
+  displayWidth 8
+  displayHeight 5
+  frameThickness 1.6
+  frameColor 0.795605 0.864805 0.546227
+  poleThickness 0.3
+}
+AdvertisingBoard {
+  translation 20.4509 0.149155 -2.02505e-13
+  rotation 0 0 1 3.14159
+  name "water_slide"
+  frontTexture [
+    "../images/water slide.png"
+  ]
+  backTexture [
+    "../images/water slide.png"
+  ]
+  displayWidth 10
+  displayHeight 9
+  frameThickness 1
+  frameColor 0.795605 0.864805 0.546227
+  poleThickness 0.3
+}
+AdvertisingBoard {
+  translation 5.94811 -13.6915 2.32322e-13
+  rotation 0 0 1 -2.91
+  name "street parade"
+  frontTexture [
+    "../images/street parade1.png"
+  ]
+  backTexture [
+    "../images/street parade1.png"
+  ]
+  displayWidth 9
+  displayHeight 6
+  frameThickness 1
+  frameColor 0.795605 0.864805 0.546227
+  poleThickness 0.3
+}
+AdvertisingBoard {
+  translation 12.9866 -19.619 -3.0731e-13
+  rotation 0 0 -1 1.5708
+  name "magic_show"
+  frontTexture [
+    "../images/magic show.png"
+  ]
+  backTexture [
+    "../images/magic show.png"
+  ]
+  displayWidth 12
+  displayHeight 8
+  frameThickness 2.6
+  frameColor 0.795605 0.864805 0.546227
+  poleThickness 0.3
+}
+AdvertisingBoard {
+  translation 13.998 -10.4436 -3.0731e-13
+  rotation 0 0 1 1.12
+  name "circus_tent"
+  frontTexture [
+    "../images/circus tent.png"
+  ]
+  backTexture [
+    "../images/circus tent.png"
+  ]
+  displayWidth 13
+  displayHeight 10
+  frameThickness 1.3
+  frameColor 0.795605 0.864805 0.546227
+  poleThickness 0.3
+}
+AdvertisingBoard {
+  translation 19.8899 -16.8066 -3.10863e-13
+  rotation 0 0 1 -5.307179586466759e-06
+  name "musical_fountain"
+  frontTexture [
+    "../images/musical fountain.png"
+  ]
+  backTexture [
+    "../images/musical fountain.png"
+  ]
+  displayWidth 8
+  displayHeight 6
+  frameThickness 1.5
+  frameColor 0.795605 0.864805 0.546227
+  poleThickness 0.3
+}
+AdvertisingBoard {
+  translation 6.19804 -7.81497 -3.28625e-13
+  rotation 0 0 -1 -2.3561953071795863
+  name "live_stage"
+  frontTexture [
+    "../images/live stage.png"
+  ]
+  backTexture [
+    "../images/live stage.png"
+  ]
+  displayHeight 7
+  frameThickness 1.8
+  frameColor 0.795605 0.864805 0.546227
+  poleThickness 0.3
+}
+AdvertisingBoard {
+  translation -7.6628 -20.318 -3.12638e-13
+  rotation 0 0 1 -1.5707953071795862
+  name "food_court"
+  frontTexture [
+    "../images/food court.png"
+  ]
+  backTexture [
+    "../images/food court.png"
+  ]
+  displayWidth 8
+  displayHeight 6
+  frameThickness 0.9
+  frameColor 0.795605 0.864805 0.546227
+  poleThickness 0.3
+}
+AdvertisingBoard {
+  translation 0.212253 -13.5799 -2.06057e-13
+  rotation 0 0 1 0.22
+  name "snack_bar"
+  frontTexture [
+    "../images/snack bar.png"
+  ]
+  backTexture [
+    "../images/snack bar.png"
+  ]
+  displayWidth 12
+  displayHeight 6
+  frameThickness 1.3
+  frameColor 0.795605 0.864805 0.546227
+  poleThickness 0.3
+}
+AdvertisingBoard {
+  translation -10.1904 -17.4441 -2.34479e-13
+  rotation 0 0 1 2.4870896938995743
+  name "ice_cream_kiosk"
+  frontTexture [
+    "../images/ice cream.png"
+  ]
+  backTexture [
+    "../images/ice cream.png"
+  ]
+  displayWidth 7
+  displayHeight 5
+  frameThickness 1.5
+  frameColor 0.795605 0.864805 0.546227
+  poleThickness 0.3
+}
+AdvertisingBoard {
+  translation -0.950011 -20.038 -3.09085e-13
+  rotation 0 0 1 -1.5708103061004253
+  name "pizza_plaza"
+  frontTexture [
+    "../images/pizza.png"
+  ]
+  backTexture [
+    "../images/pizza.png"
+  ]
+  displayWidth 5
+  displayHeight 5
+  frameThickness 1.5
+  frameColor 0.795605 0.864805 0.546227
+  poleThickness 0.3
+}
+PicketFence {
+  translation -20.9249 21.0302 -1.77635e-15
+  numberOfSegments 4
+}
+PicketFence {
+  translation -20.9249 10.6093 -1.77635e-15
+  name "picket fence(1)"
+  numberOfSegments 5
+}
+PicketFence {
+  translation -12.1479 11.9595 -7.99361e-14
+  rotation 0 0 1 0.67
+  name "picket fence(5)"
+  numberOfSegments 5
+}
+PicketFence {
+  translation -19.2525 20.9577 -7.99361e-14
+  rotation 0 0 1 0.67
+  name "picket fence(6)"
+  numberOfSegments 5
+}
+PicketFence {
+  translation -21 2 -1.77635e-15
+  rotation 0 0 1 1.5707996938995747
+  name "picket fence(2)"
+  numberOfSegments 8
+}
+PicketFence {
+  translation -7.32744 1.97999 -1.77635e-15
+  rotation 0 0 1 3.0106996938995745
+  name "picket fence(3)"
+  numberOfSegments 2
+}
+PicketFence {
+  translation -20.9697 20.992 -4.26326e-14
+  rotation 0 0 1 1.5708003061004252
+  name "picket fence(4)"
+}
+PicketFenceWithDoor {
+  translation -20.9249 14.4 3.23297e-13
+  rotation 0 0 1 3.141592653589793
+}
+PicketFenceWithDoor {
+  translation -12.0444 11.8615 3.22853e-13
+  rotation 0 0 1 0.67
+  name "picket fence with door(1)"
+}
+AdvertisingBoard {
+  translation -5.13356 -10.9617 -3.33956e-13
+  rotation 0 0 1 2.47
+  name "smoothie_station"
+  frontTexture [
+    "../images/smoothie.png"
+  ]
+  backTexture [
+    "../images/smoothie.png"
+  ]
+  displayWidth 9
+  displayHeight 6
+  frameThickness 1.5
+  frameColor 0.795605 0.864805 0.546227
+  poleThickness 0.3
+}
+AdvertisingBoard {
+  translation -17.3241 -3.92721 -1.3678e-13
+  rotation 0 0 -1 -1.5707853071795865
+  name "ball_pit_dome"
+  frontTexture [
+    "../images/ball pit dome.png"
+  ]
+  backTexture [
+    "../images/ball pit dome.png"
+  ]
+  displayWidth 7
+  displayHeight 6
+  frameThickness 3.1
+  frameColor 0.795605 0.864805 0.546227
+  poleThickness 0.3
+}
+AdvertisingBoard {
+  translation -10.3418 -8.4422 -1.65201e-13
+  rotation 0 0 1 -0.67
+  name "train_adventure"
+  frontTexture [
+    "../images/train adventure.png"
+  ]
+  backTexture [
+    "../images/train adventure.png"
+  ]
+  displayWidth 8
+  displayHeight 8
+  frameThickness 0.9
+  frameColor 0.795605 0.864805 0.546227
+  poleThickness 0.3
+}
+AdvertisingBoard {
+  translation -20.2455 -13.1274 3.99986e-09
+  name "mini_ferris_wheel"
+  frontTexture [
+    "../images/mini ferris wheel.png"
+  ]
+  backTexture [
+    "../images/mini ferris wheel.png"
+  ]
+  displayWidth 15
+  displayHeight 10
+  frameThickness 1.3
+  frameColor 0.795605 0.864805 0.546227
+  poleThickness 0.3
+}
+AdvertisingBoard {
+  translation -16.4794 -16.056 -1.58096e-13
+  rotation 0 0 1 -0.67
+  name "animal_safari_ride"
+  frontTexture [
+    "../images/animal safari ride.png"
+  ]
+  backTexture [
+    "../images/animal safari ride.png"
+  ]
+  displayWidth 11
+  displayHeight 8
+  frameThickness 1
+  frameColor 0.795605 0.864805 0.546227
+  poleThickness 0.3
+}
+AdvertisingBoard {
+  translation -10.5287 -3.8955 -2.09611e-13
+  rotation 0 0 1 1.57079
+  name "bumper_cars"
+  frontTexture [
+    "../images/bumper car.png"
+  ]
+  backTexture [
+    "../images/bumper car.png"
+  ]
+  displayWidth 6
+  displayHeight 5
+  frameThickness 3.1
+  frameColor 0.795605 0.864805 0.546227
+  poleThickness 0.3
+}
+AdvertisingBoard {
+  translation 12.1905 -2.09935 -2.34479e-13
+  rotation 0 0 -1 2.03
+  name "lazy river"
+  frontTexture [
+    "../images/lazy river.png"
+  ]
+  backTexture [
+    "../images/lazy river.png"
+  ]
+  displayWidth 6
+  displayHeight 6
+  frameThickness 2.6
+  frameColor 0.795605 0.864805 0.546227
+  poleThickness 0.3
+}
+AdvertisingBoard {
+  translation 17.6033 -4.75817 -3.0731e-13
+  rotation 9.58979e-09 5.95631e-09 1 -2.029995307179586
+  name "log_flume"
+  frontTexture [
+    "../images/log flume.png"
+  ]
+  backTexture [
+    "../images/log flume.png"
+  ]
+  displayWidth 6
+  displayHeight 7
+  frameThickness 2.6
+  frameColor 0.795605 0.864805 0.546227
+  poleThickness 0.3
+}
+AdvertisingBoard {
+  translation 17.2753 4.63355 -4.42313e-13
+  rotation 0 0 1 2.0308996938995745
+  name "splash_battle"
+  frontTexture [
+    "../images/splash battle.png"
+  ]
+  backTexture [
+    "../images/splash battle.png"
+  ]
+  displayWidth 7
+  displayHeight 7
+  frameThickness 2.1
+  frameColor 0.795605 0.864805 0.546227
+  poleThickness 0.3
+}
+AdvertisingBoard {
+  translation 11.613 2.15788 -3.73039e-14
+  rotation 0 0 1 2.0308996938995745
+  name "wave_pool"
+  frontTexture [
+    "../images/wave pool.png"
+  ]
+  backTexture [
+    "../images/wave pool.png"
+  ]
+  displayWidth 5
+  displayHeight 5
+  frameThickness 1.5
+  frameColor 0.795605 0.864805 0.546227
+  poleThickness 0.3
+}
+DEF Wall4 AdvertisingBoard {
+  translation -5.51205 12.7442 -3.92575e-13
+  rotation 0 0 -1 -0.6545053061004253
+  name "spinning_vortex"
+  frontTexture [
+    "../images/spinning vortex.png"
+  ]
+  backTexture [
+    "../images/spinning vortex.png"
+  ]
+  displayWidth 6
+  displayHeight 9
+  frameThickness 2.6
+  frameColor 0.795605 0.864805 0.546227
+  poleThickness 0.3
+}
+DEF Wall5 AdvertisingBoard {
+  translation -10.0809 17.7099 -4.24549e-13
+  rotation 0 0 -1 -0.6545053071795861
+  name "freefall_cannon"
+  frontTexture [
+    "../images/freefall cannon.png"
+  ]
+  backTexture [
+    "../images/freefall cannon.png"
+  ]
+  displayWidth 7
+  displayHeight 9
+  frameThickness 1.4
+  frameColor 0.795605 0.864805 0.546227
+  poleThickness 0.3
+}
+DEF Wall3 AdvertisingBoard {
+  translation -5.94088 20.3054 -2.36256e-13
+  rotation 0 0 1 -1.5707853071795865
+  name "roller_coaster"
+  frontTexture [
+    "../images/roller coaster.png"
+  ]
+  backTexture [
+    "../images/roller coaster.png"
+  ]
+  displayWidth 11
+  displayHeight 10
+  frameThickness 1.3
+  frameColor 0.795605 0.864805 0.546227
+  poleThickness 0.3
+}
+DEF Wall2 AdvertisingBoard {
+  translation -0.0784134 15.4652 -2.93099e-13
+  rotation 0 0 1 2.8798
+  name "drop_tower"
+  frontTexture [
+    "../images/drop tower.png"
+  ]
+  backTexture [
+    "../images/drop tower.png"
+  ]
+  displayWidth 9
+  displayHeight 7
+  frameThickness 2.6
+  frameColor 0.795605 0.864805 0.546227
+  poleThickness 0.3
+}
+TiagoLite {
+  translation 0.0250265 0.0618934 0.095
+  rotation 0 0 1 3.14158
+  controller "full_WeightAstar_controller"
+  window "<none>"
+  cameraSlot [
+    Lidar {
+      rotation 0.9831056944488314 0.1294279597735375 0.1294279597735375 1.58784
+      horizontalResolution 1000
+      fieldOfView 3.1
+      verticalFieldOfView 0.19
+      numberOfLayers 6
+      minRange 0.25
+      maxRange 8
+      minFrequency 2
+    }
+    Astra {
+      translation -0.028 -0.035 -0.009
+      rotation 1 0 0 -1.5708
+      name "rgbd_camera"
+    }
+  ]
+  lidarSlot [
+    Compass {
+    }
+    InertialUnit {
+      name "inertial_unit"
+    }
+    GPS {
+    }
+  ]
+}
+DEF Circus_Tent SmallKiosk {
+  translation 7.9285 0.0401465 -3.94351e-13
+  name "small kiosk(4)"
+}
+PalmTree {
+  translation -20.5431 19.3087 -2.71783e-13
+}
+PalmTree {
+  translation -7.67946 3.07879 -2.64678e-13
+  name "palm tree(1)"
+}
+PalmTree {
+  translation -15.9411 2.59387 -2.48691e-13
+  name "palm tree(7)"
+}
+PalmTree {
+  translation -9.62633 7.62104 -2.70007e-13
+  name "palm tree(8)"
+}
+PalmTree {
+  translation -11.4969 9.72681 -2.70007e-13
+  name "palm tree(10)"
+}
+PalmTree {
+  translation -8.18934 5.84312 -2.70007e-13
+  name "palm tree(9)"
+}
+PalmTree {
+  translation -17.3618 17.6163 -2.64678e-13
+  name "palm tree(6)"
+}
+PalmTree {
+  translation -18.5486 16.2755 -2.68231e-13
+  name "palm tree(12)"
+}
+PalmTree {
+  translation -18.6545 19.1347 -2.64678e-13
+  name "palm tree(11)"
+}
+PalmTree {
+  translation -20.1522 17.8925 -2.57573e-13
+  name "palm tree(2)"
+}
+PalmTree {
+  translation -18.1686 2.48841 -2.57573e-13
+  name "palm tree(3)"
+}
+Bench {
+  translation -20.0269 8.65302 1.59873e-14
+}
+Bench {
+  translation -20.0766 14.259 1.42109e-14
+  rotation 0 0 -1 -5.307179586466759e-06
+  name "bench(1)"
+}
+PalmTree {
+  translation -18.8485 6.3033 -2.57573e-13
+  name "palm tree(4)"
+}
+StoneBench {
+  translation -12.1213 2.87193 1.42109e-14
+  rotation 0 0 1 1.5708
+}
+StoneBench {
+  translation -9.66343 2.83437 1.42109e-14
+  rotation 0 0 1 1.5708
+  name "stone bench(1)"
+}
+PalmTree {
+  translation -19.8153 4.6148 -2.57573e-13
+  name "palm tree(5)"
+}
+Wall {
+  translation 24.9 0 1.06581e-14
+  size 0.2 50 4
+  appearance Roughcast {
+    colorOverride 0 0 0
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  translation -24.9 0 1.06581e-14
+  name "wall(1)"
+  size 0.2 50 4
+  appearance Roughcast {
+    colorOverride 0 0 0
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  translation 0 -24.9 1.06581e-14
+  rotation 0 0 1 1.5707996938995747
+  name "wall(2)"
+  size 0.2 50 4
+  appearance Roughcast {
+    colorOverride 0 0 0
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+Wall {
+  translation 0 24.9 1.06581e-14
+  rotation 0 0 1 1.5707996938995747
+  name "wall(3)"
+  size 0.2 50 4
+  appearance Roughcast {
+    colorOverride 0 0 0
+    textureTransform TextureTransform {
+      scale 2.4 1
+    }
+  }
+}
+DEF speed_=_0_3 Pedestrian {
+  translation 3.69019 11.5127 0.97
+  name "pedestrian(1)"
+  controllerArgs [
+    "--trajectory=-2.87 10.2, -4.2 -17.4"
+    "--speed=0.7"
+  ]
+}
+DEF speed_=_0_3 Pedestrian {
+  translation 8.3 -3.51346 0.97
+  name "pedestrian(2)"
+  controllerArgs [
+    "--trajectory=-6.92 -6.18, 10.2 -3.51"
+    "--speed=0.7"
+  ]
+}
